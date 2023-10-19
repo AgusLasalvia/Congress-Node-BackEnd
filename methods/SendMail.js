@@ -6,8 +6,8 @@ const mail = nodemailer.createTransport({
     port: 465,  // Default Gmail smtp port
     secure: true,
     auth: {
-        user: "aguslblumenfeld@gmail.com",
-        pass: "lnfzwfsumfidaxjd", // Password created from gmail for apps
+        user: "email",
+        pass: "password", // Password created from gmail for apps
     },
 });
 
@@ -16,7 +16,7 @@ function SendMail(receiver, message, subject) {
 
     // Mail individual options
     let mailOptions = {
-        from: "aguslblumenfeld@gmail.com",
+        from: "email",
         to: receiver["email"],
         subject: subject,
         text: `${receiver["firstName"]} ${receiver["lastName"]} : \n ${message}`,
